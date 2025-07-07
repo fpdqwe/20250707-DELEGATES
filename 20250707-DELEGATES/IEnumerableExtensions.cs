@@ -1,8 +1,8 @@
 ﻿namespace _20250707_DELEGATES
 {
-    public static class IEnumerableExtensions
+    internal static class IEnumerableExtensions
     {
-        public static T GetMax<T>(this IEnumerable<T> collection, Func<T, float> convertToNumber) where T : class
+        internal static T GetMax<T>(this IEnumerable<T> collection, Func<T, float> convertToNumber) where T : class
         {
             if (collection == null || !collection.Any() || convertToNumber == null)
                 throw new ArgumentNullException(nameof(collection));
